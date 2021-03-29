@@ -1,0 +1,33 @@
+.auth {
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 2;
+
+  .login {
+    height: 46px;
+    width: 131px;
+    border-radius: 5px;
+    background: $green-light;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-right: 34px;
+    &:hover {
+      background: $green-dark;
+      transition: 0.3s all ease-in-out;
+    }
+  }
+
+  .register {
+    color: $green-light;
+    font-size: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      color: $green-dark;
+    }
+  }
+}

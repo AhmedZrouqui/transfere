@@ -1,13 +1,15 @@
 import React from 'react'
 import './assets/style/global.css'
-import Header from './components/Header'
+import Main from './components/Main'
+import SideMenu from './components/SideMenu'
 
 function App() {
   return (
-    <div>
-        <Header>
-          
-        </Header>
+    <div className="app">
+        <SideMenu>
+        </SideMenu>
+
+        <Main></Main>
     </div>
   )
 }

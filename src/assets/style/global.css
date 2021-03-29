@@ -4,13 +4,337 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -ms-grid-columns: 20vh 80vh;
+      grid-template-columns: 20vh 80vh;
   font-family: "Cairo", sans-serif;
-  background: #141414;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  list-style: none;
+}
+
+.app {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background: #1e1e1e;
+  -ms-grid-columns: 20vw 80vw;
+      grid-template-columns: 20vw 80vw;
+}
+
+.sideMenu {
+  height: 100vh;
+  width: 100%;
+  padding: 96px 0;
+  background: #171717;
+}
+
+.sideMenu .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 48px;
+}
+
+.sideMenu .logo .portalIcon {
+  color: #28924e;
+  width: 50px;
+  height: 50px;
+}
+
+.sideMenu .logo .portalioTitle {
+  font-size: 30px;
+  color: white;
+  margin-left: 18px;
+  font-weight: 600;
+}
+
+.sideMenu .line {
+  height: 2px;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 170px;
+  background: #1e1e1e;
+}
+
+.sideMenu .menu-wrapper {
+  list-style: none;
+  padding: 0;
+}
+
+.sideMenu .menu-wrapper .menu-item {
+  padding: 17px 126px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.sideMenu .menu-wrapper .menu-item::after {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 3px;
+  right: 3px;
+  top: 2.5%;
+}
+
+.sideMenu .menu-wrapper .menu-item:hover {
+  background: #1e1e1e;
+}
+
+.sideMenu .menu-wrapper .menu-item:hover::after {
+  background: #076723;
+}
+
+.main {
+  padding: 40px 56px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20vh auto;
+      grid-template-rows: 20vh auto;
+  -ms-grid-columns: minmax(auto, 100%);
+      grid-template-columns: minmax(auto, 100%);
 }
 
 .header {
-  width: 100vw;
-  height: 80px;
-  background: #1f1f1f;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.server {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 332px;
+  height: 162px;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #171717;
+}
+
+.server .serverName {
+  color: white;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.server .infos {
+  color: #a7a7a7;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.serverBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 30, 30, 0.6);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.serverHandler {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  background: #171717;
+  width: 60%;
+  height: 80%;
+  padding: 40px 56px;
+  overflow-y: scroll;
+  border-radius: 15px;
+}
+
+.serverHandler .currentServer {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.serverHandler .currentServer span {
+  color: #076723;
+}
+
+.serverHandler .serverList {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: minmax(auto, 90px);
+      grid-template-rows: minmax(auto, 90px);
+  grid-gap: 15px;
+}
+
+.serverHandler .serverList > .serverItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 20%;
+  height: 90px;
+  background: #1e1e1e;
+}
+
+.serverHandler .serverList > .serverItem > h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+
+.serverHandler .serverList > .serverItem:hover h3 {
+  color: #a1a1a1;
+}
+
+.serverHandler .close {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  cursor: pointer;
+}
+
+.serverHandler .close:hover {
+  color: #a1a1a1;
+}
+
+.serverHandler::-webkit-scrollbar {
+  background: transparent;
+}
+
+.serverHandler::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+}
+
+.auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 46px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.auth .login {
+  height: 46px;
+  width: 131px;
+  border-radius: 5px;
+  background: #28924e;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin-right: 34px;
+}
+
+.auth .login:hover {
+  background: #076723;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+.auth .register {
+  color: #28924e;
+  font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.auth .register:hover {
+  color: #076723;
+}
+
+.portalInfos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 2fr;
+      grid-template-columns: 2fr 1fr 2fr;
+  grid-gap: 18px;
+}
+
+.portalInfos > div {
+  background: #171717;
+  border-radius: 15px;
+}
+
+.portalInfos .portalInfo,
+.portalInfos .portalPosition,
+.portalInfos .portalModificator {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.portalInfos .portalInfo {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.portalInfos > .portalUtilizations {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.portalInfos > .fifth {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 3;
+  grid-row: 4/7;
+}
+
+.portalInfos > .sixth {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 4;
+  grid-row: 3/7;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
 }
 /*# sourceMappingURL=global.css.map */

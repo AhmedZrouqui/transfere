@@ -1,0 +1,6 @@
+.main {
+  padding: 40px 56px;
+  display: grid;
+  grid-template-rows: 20vh auto;
+  grid-template-columns: minmax(auto, 100%);
+}
