@@ -1,6 +1,9 @@
 import React from 'react'
 
-function PortalInfos() {
+function PortalInfos(props) {
+
+    const {portalInfos, setPortalInfos} = props;
+
     return (
         <div className="portalInfos">
             <div className="portalInfo">

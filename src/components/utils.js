@@ -38,4 +38,16 @@ const servers = [
     }
 ]
 
-export default {menu,servers}
+const portalInfos = [
+    {
+        'id': uuidv4(),
+        'title': "enutrosor",
+        'server': "ilyzaelle",
+        'position':"[15,-65]",
+        'utilisations': "89",
+        'up':'15',
+        'down':'2',
+    }
+]
+
+export default {menu,servers,portalInfos}

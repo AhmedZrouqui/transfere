@@ -287,6 +287,284 @@
   color: #076723;
 }
 
+.auth-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 30, 30, 0.6);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.authentication {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  background: #171717;
+  width: 60%;
+  height: 80%;
+  padding: 20px 26px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.authentication > .line {
+  height: 100%;
+  width: 2px;
+  background: #1e1e1e;
+}
+
+.authentication > .close {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.authentication > .close:hover {
+  color: #a1a1a1;
+}
+
+.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 55%;
+  height: 60%;
+  padding: 30px 50px;
+}
+
+.login-form > .loginHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-form > .loginHeader > p {
+  color: #28924e;
+  font-weight: 600;
+}
+
+.login-form > .loginHeader > h2 {
+  color: #28924e;
+  font-size: 34px;
+}
+
+.login-form > .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+}
+
+.login-form > .form-container > .form-div {
+  margin-bottom: 25px;
+  width: 70%;
+  height: 50px;
+  position: relative;
+  font-size: 18px;
+  color: #a1a1a1;
+}
+
+.login-form > .form-container > .form-div > label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.login-form > .form-container > .form-div > .input {
+  font-size: 18px;
+  color: #a1a1a1;
+  background: #1e1e1e;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+}
+
+.login-form > .form-container > .form-div > .input:focus {
+  border: 1px solid #28924e;
+}
+
+.login-form > .form-container > .form-div > .input:focus + label {
+  top: -10px;
+  left: 0;
+  font-size: 14px;
+}
+
+.login-form > .form-container > .form-div > .input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 0;
+  font-size: 14px;
+}
+
+.login-form > .form-container > .forgot-password {
+  color: #076723;
+  width: 70%;
+  margin-top: -10px;
+}
+
+.login-form > .form-container > .login-btn {
+  width: 70%;
+  height: 50px;
+  margin-top: 10px;
+  border: none;
+  font-size: 18px;
+  background: #076723;
+  color: white;
+  cursor: pointer;
+}
+
+.login-form > .form-container > .login-btn:hover {
+  background: #28924e;
+}
+
+.register-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45%;
+  height: 80%;
+  padding: 30px 50px;
+}
+
+.register-form > .register-header {
+  color: #28924e;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.register-form > .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  width: 100%;
+}
+
+.register-form > .form-container > .form-div {
+  margin-bottom: 25px;
+  width: 90%;
+  height: 50px;
+  position: relative;
+  font-size: 18px;
+  color: #a1a1a1;
+}
+
+.register-form > .form-container > .form-div > label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.register-form > .form-container > .form-div > .input {
+  font-size: 18px;
+  color: #a1a1a1;
+  background: #1e1e1e;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+}
+
+.register-form > .form-container > .form-div > .input:focus {
+  border: 1px solid #28924e;
+}
+
+.register-form > .form-container > .form-div > .input:focus + label {
+  top: -10px;
+  left: 0;
+  font-size: 14px;
+}
+
+.register-form > .form-container > .form-div > .input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 0;
+  font-size: 14px;
+}
+
+.register-form > .form-container .invalid-password {
+  border: 1px solid #e74c3c !important;
+}
+
+.register-form > .form-container > .register-btn {
+  width: 90%;
+  height: 50px;
+  margin-top: 10px;
+  border: none;
+  font-size: 18px;
+  background: #076723;
+  color: white;
+  cursor: pointer;
+}
+
+.register-form > .form-container > .register-btn:hover {
+  background: #28924e;
+}
+
 .portalInfos {
   display: -ms-grid;
   display: grid;
