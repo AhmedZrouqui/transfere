@@ -8,7 +8,7 @@ function Authentication(props) {
 
     const {isAuthOpen, setIsAuthOpen } = props
 
-    if(isAuthOpen) return null
+    if(!isAuthOpen) return null
 
     return reactDom.createPortal(
         <>

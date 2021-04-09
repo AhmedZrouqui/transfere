@@ -1,0 +1,18 @@
+.editPortal {
+  margin-left: 50px;
+  position: relative;
+  width: 400px;
+
+  & > .editButton {
+    position: absolute;
+    bottom: 28px;
+
+    background: $dark-grey;
+    color: #a1a1a1;
+    border: none;
+    padding: 15px 36px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 15px;
+  }
+}
