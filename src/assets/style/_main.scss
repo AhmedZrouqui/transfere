@@ -1,6 +1,14 @@
 .main {
+  flex: 8;
+  width: 100vw;
   padding: 40px 56px;
   display: grid;
   grid-template-rows: 20vh auto;
   grid-template-columns: minmax(auto, 100%);
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    grid-template-rows: 20vh auto;
+  }
 }

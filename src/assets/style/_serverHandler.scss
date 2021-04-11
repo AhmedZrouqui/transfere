@@ -79,3 +79,10 @@
     background: $light-grey;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .serverHandler {
+    width: 100%;
+    height: 100%;
+  }
+}

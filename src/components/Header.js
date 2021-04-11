@@ -9,7 +9,6 @@ function Header() {
             <Server />
             <EditPortal />
             <AuthModule />
-            
         </div>
     )
 }

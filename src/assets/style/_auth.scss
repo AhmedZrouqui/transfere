@@ -31,3 +31,23 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .auth {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .auth {
+    .login {
+      height: 38px;
+      width: 107px;
+      font-size: 18px;
+    }
+
+    .register {
+      font-size: 18px;
+    }
+  }
+}

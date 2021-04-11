@@ -1,8 +1,19 @@
 .sideMenu {
+  flex: 2;
   height: 100vh;
   width: 100%;
   padding: 96px 0;
   background: $dark-grey;
+
+  .closeMenu {
+    display: none;
+    position: absolute;
+    color: #a6a6a6;
+    font-size: 45px;
+    top: 24px;
+    left: 24px;
+    cursor: pointer;
+  }
 
   .logo {
     display: flex;
@@ -35,7 +46,7 @@
     list-style: none;
     padding: 0;
     .menu-item {
-      padding: 17px 126px;
+      padding: 17px 0px;
       text-align: center;
       font-weight: 300;
       font-size: 24px;
@@ -60,4 +71,24 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 1460px) {
+  .sideMenu {
+    position: absolute;
+    width: 0vw;
+    display: none;
+    z-index: 1000;
+    transition: 0.2s all ease-in-out;
+
+    .closeMenu {
+      display: block;
+    }
+  }
+}
+
+.open {
+  width: 100vw;
+  display: block;
+  transition: 0.4s all ease-in-out;
 }

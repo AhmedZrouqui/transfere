@@ -1,10 +1,25 @@
-import React from 'react'
-import * as GiIcons  from 'react-icons/gi'
+import React, { useEffect } from 'react'
+import * as BiIcons  from 'react-icons/bi'
 import utils from './utils'
 
-function SideMenu() {
+function SideMenu(props) {
+    const {openMenu, setOpenMenu} = props;
+
+    const openSideMenu = () => {
+        const menu=document.getElementById("sidemenu");
+        if(openMenu){
+            menu.classList.add("open")
+        } else menu.classList.remove("open")
+    }
+
+    useEffect(() => {
+        openSideMenu();
+    },[openMenu])
+
     return (
-        <div className="sideMenu">
+
+        <div className="sideMenu" id="sidemenu">
+                <BiIcons.BiLeftArrowAlt className="closeMenu" onClick={() => setOpenMenu(false)}/>
             <div className="logo">
                 <h2 className="portalioTitle">portal.io</h2>
             </div> 

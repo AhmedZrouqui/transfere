@@ -6,27 +6,28 @@ import utils from './utils'
 function UpdatePortal(props) {
 
     const [optionsArray, setOptionsArray] = useState([])
-
-    useEffect(() => {
-        const fillOptionsArray = () => {
-            if(optionsArray.length < 10){
-                utils.PortalModificators.filter
-                ((portal, index) => portal.name === defaultPortal)                 
-                .map(portal => {
-                    portal.modificators.map((modificator,index) =>
-                        setOptionsArray([...optionsArray, <option key={index} value={modificator}>{modificator}</option>])
-                    )
-                })
-            }
-        }
-
-        fillOptionsArray()
-    })
-
     const {editPortalOpen, setEditPortalOpen, onClose} = props
     const [serverPosition, setServerPosition] = useState()
     const defaultPortal= 'enutrosor'
 
+    const fillOptionsArray = () => {
+        const tempArray = []
+        utils.PortalModificators.filter
+        ((portal, index) => portal.name === defaultPortal)                 
+        .map(portal => {
+            portal.modificators.map((modificator,index) =>
+                tempArray.push(<option key={index} value={modificator}>{modificator}</option>)
+            )
+        })
+
+        setOptionsArray(tempArray)
+    }
+
+    useEffect(() => {
+        fillOptionsArray()
+    }, [])
+
+    
     const onUpdatePortal = e => {
         e.preventDefault();
         onClose();

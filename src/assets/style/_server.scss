@@ -21,3 +21,9 @@
     font-weight: 500;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .server {
+    width: 100%;
+  }
+}
