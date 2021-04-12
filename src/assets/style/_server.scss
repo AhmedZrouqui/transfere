@@ -25,5 +25,12 @@
 @media screen and (max-width: 768px) {
   .server {
     width: 100%;
+    .serverName {
+      font-size: 24px;
+    }
+
+    .infos {
+      font-size: 18px;
+    }
   }
 }
